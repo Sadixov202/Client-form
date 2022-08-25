@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="section-title text-center mt-4 mb-4">
+    <h1>Информация о клиенте</h1>
+
+  </div>
+  <div class="section-holder">
+    <div class="flex">
+
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+    
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header text-center">
+              <h1>Шаг <span class="badge bg-secondary">1</span> </h1>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Фамилия: {{clientMainInfo.lastname}}
+              </li>
+              <li class="list-group-item">
+                Имя: {{clientMainInfo.name}}
+              </li>
+              <li class="list-group-item">
+                Отчество: {{clientMainInfo.middleName}}
+              </li>
+              <li class="list-group-item">
+                Дата рождения: {{clientMainInfo.birthday | date: 'dd-MM-yyyy'}}
+              </li>
+              <li class="list-group-item">
+                Номер телефона: {{clientMainInfo.phone}}
+              </li>
+              <li class="list-group-item">
+                Пол: {{clientMainInfo.gender}}
+              </li>
+              <li class="list-group-item">
+                Группа клиентов: {{clientMainInfo.clientType}}
+              </li>
+              <li class="list-group-item">
+                Координатор: {{clientMainInfo.cordinator}}
+              </li>
+              <li class="list-group-item">
+                Не отправлять СМС: {{clientMainInfo.sendMessage ? 'Не отправлять' : 'Отправлять'}}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header text-center">
+              <h1>Шаг <span class="badge bg-secondary">2</span> </h1>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Индекс: {{addressInfo.index}}
+              </li>
+              <li class="list-group-item">
+                Страна: {{addressInfo.country}}
+              </li>
+              <li class="list-group-item">
+                Область: {{addressInfo.region}}
+              </li>
+              <li class="list-group-item">
+                Город: {{addressInfo.city}}
+              </li>
+              <li class="list-group-item">
+                Улица: {{addressInfo.street}}
+              </li>
+              <li class="list-group-item">
+                Дом: {{addressInfo.house}}
+              </li>
+        
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header text-center">
+              <h1>Шаг <span class="badge bg-secondary">3</span> </h1>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Тип документа: {{identityInfo.documentType}}
+              </li>
+              <li class="list-group-item">
+                Серия: {{identityInfo.serial}}
+              </li>
+              <li class="list-group-item">
+                Номер: {{identityInfo.passportNumber}}
+              </li>
+              <li class="list-group-item">
+                Кем выдан: {{identityInfo.issuer}}
+              </li>
+              <li class="list-group-item">
+                Дата выдачи: {{identityInfo.date | date: 'dd-MM-yyyy'}}
+              </li>
+              <li class="list-group-item ">
+                Файл: <img class="img-thumbnail" *ngIf="identityInfo.file" style="height: 300px; object-fit: contain;" [src]="identityInfo.file" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
